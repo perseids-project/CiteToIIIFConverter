@@ -33,7 +33,8 @@ except ImportError:
 
 def converttoiiif(file):
     #takes in the base url from the console (will need to be updated with the way to get url from persieds)
-    baseurl = input("enter base url: ")
+    baseurl = input("enter base url for manifest: ")
+    imagebaseurl = input("enter base url for images: ")
     #takes in the largest height and width of images to be included in this file
     height = input("enter the height of the tallest image referenced by this file: ")
     width = input("enter the width of the widest image referenced by this file: ")
@@ -58,10 +59,10 @@ def converttoiiif(file):
     for n in root.findall(".//xml:w", namespaces = ns):
         objid, wordid = n.get("facs").split(":",3)[3].split("@",1)
         if objid in pages:
-            data = [wordid,n.text]
+            data = [wordid,n.text,objid]
             pages[objid].append(data)
         else:
-            pages[objid] = [[wordid,n.text]]
+            pages[objid] = [[wordid,n.text,objid]]
     num = 0
     # reads through each images and creates a canvas for it
     images=[]
@@ -102,14 +103,9 @@ def converttoiiif(file):
                    "@type":"oa:Annotation",
                    "motivation":"sc:painting",
                    "resource":{
-                               "@id":"http://"+baseurl+"/iiif/"+label+"/res/"+"p."+str(num)+".jpg",
+                               "@id":"http://"+imagebaseurl+"/iiif/"+z[2]+".jpg",
                                "@type":"dctypes:Image",
                                "format":"image/jpeg",
-                               "service": {
-                                           "@context": "http://iiif.io/api/image/2/context.json",
-                                           "@id": "http://"+baseurl+"/images/"+"p."+str(num),
-                                           "profile":"http://iiif.io/api/image/2/level1.json"
-                                            },
                                "height":height,
                                "width":width
                                },
