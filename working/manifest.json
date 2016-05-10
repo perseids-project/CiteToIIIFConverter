@@ -1,0 +1,165 @@
+{
+    "@context":"http:\/\/iiif.io\/api\/presentation\/2\/context.json",
+    "@id":"http:\/\/perseids.org\/iiif\/book1\/manifest",
+    "@type":"sc:Manifest",
+    "label":"pdllatmc:medms.boh01.perseids-lat1",
+    "metadata":[
+        {
+            "label":"fileDesc",
+            "value":"\n         "
+        },
+        {
+            "label":"titleStmt",
+            "value":"\n            "
+        },
+        {
+            "label":"title",
+            "value":"urn:cts:pdllatmc:medms.boh01.perseids-lat1"
+        },
+        {
+            "label":"publicationStmt",
+            "value":"\n            "
+        },
+        {
+            "label":"authority",
+            "value":"Perseus Project"
+        },
+        {
+            "label":"idno",
+            "value":"urn_cts_pdllatmc_medms.boh01.TempTexts-en-2015-10"
+        },
+        {
+            "label":"availability",
+            "value":"\n               "
+        },
+        {
+            "label":"p",
+            "value":"This work is licensed under a\n          "
+        },
+        {
+            "label":"ref",
+            "value":"Creative \n          Commons Attribution-ShareAlike 3.0 License"
+        },
+        {
+            "label":"sourceDesc",
+            "value":"\n            "
+        },
+        {
+            "label":"p",
+            "value":"\n               "
+        },
+        {
+            "label":"bibl",
+            "value":"urn:cts:pdllatmc:medms.boh01.TempTexts-en-2015-10"
+        }
+    ],
+    "sequences":[
+        {
+            "@id":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-lat1/sequence/normal",
+            "@type":"sc:Sequence",
+            "canvases":[
+                {
+                    "@id":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-lat1/canvas/p.1",
+                    "@type":"sc:Canvas",
+                    "height":500,
+                    "images":[
+                        {
+                            "@type":"oa:Annotation",
+                            "motivation":"sc:painting",
+                            "on":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-lat1/canvas/p.1",
+                            "resource":{
+                                "@id":"http://www.perseids.org/jackson/srcref?urn=urn:cite:perseus:miscellanyimgs.6CfHH5X3Djb",
+                                "@type":"dctypes:Image",
+                                "format":"image/jpeg",
+                                "height":500,
+                                "width":50,
+                                "service": {
+                                  "@id": "http://test.iiifhosting.com/iiif/0BwasmJBJBAHjUm1GR1VZSEFTR28/",
+                                  "@context": "http://iiif.io/api/image/2/context.json",
+                                  "profile": [ "http://iiif.io/api/image/2/level1.json", { "formats" : [ "jpg" ], "qualities" : [ "native","color","gray" ], "supports" : ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","rotationBy90s","mirroring","gray"] } ]
+                                }
+                            }
+                        },
+                        {
+                            "@type":"oa:Annotation",
+                            "motivation":"sc:painting",
+                            "on":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-lat1/canvas/p.2",
+                            "resource":{
+                                "@id":"http://test.iiifhosting.com/iiif/0BwasmJBJBAHjUm1GR1VZSEFTR28/",
+                                "@type":"dctypes:Image",
+                                "format":"image/jpeg",
+                                "height":500,
+                                "width":50,
+                                "service": {
+                                  "@id": "http://test.iiifhosting.com/iiif/0BwasmJBJBAHjUm1GR1VZSEFTR28/",
+                                  "@context": "http://iiif.io/api/image/2/context.json",
+                                  "profile": [ "http://iiif.io/api/image/2/level1.json", { "formats" : [ "jpg" ], "qualities" : [ "native","color","gray" ], "supports" : ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","rotationBy90s","mirroring","gray"] } ]
+                                }
+                            }
+                        }
+                    ],
+                    "label":"p. 1",
+                    "width":50,
+                    "otherContent": [
+                      {
+                        "@id":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-lat1/list/p.1",
+                         "@type":"sc:AnnotationList"
+                      }
+                    ]
+                },
+                {
+                    "@id":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-lat1/canvas/p.2",
+                    "@type":"sc:Canvas",
+                    "height":500,
+                    "images":[
+                        {
+                            "@type":"oa:Annotation",
+                            "motivation":"sc:painting",
+                            "on":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-lat1/canvas/p.1",
+                            "resource":{
+                                "@id":"http://www.perseids.org/jackson/srcref?urn=urn:cite:perseus:miscellanyimgs.6CfHH5X3Djb",
+                                "@type":"dctypes:Image",
+                                "format":"image/jpeg",
+                                "height":500,
+                                "width":50,
+                                "service": {
+                                  "@id": "http://test.iiifhosting.com/iiif/0BwasmJBJBAHjUm1GR1VZSEFTR28/",
+                                  "@context": "http://iiif.io/api/image/2/context.json",
+                                  "profile": [ "http://iiif.io/api/image/2/level1.json", { "formats" : [ "jpg" ], "qualities" : [ "native","color","gray" ], "supports" : ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","rotationBy90s","mirroring","gray"] } ]
+                                }
+                            }
+                        },
+                        {
+                            "@type":"oa:Annotation",
+                            "motivation":"sc:painting",
+                            "on":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-lat1/canvas/p.2",
+                            "resource":{
+                                "@id":"http://test.iiifhosting.com/iiif/0BwasmJBJBAHjUm1GR1VZSEFTR28/",
+                                "@type":"dctypes:Image",
+                                "format":"image/jpeg",
+                                "height":500,
+                                "width":50,
+                                "service": {
+                                  "@id": "http://test.iiifhosting.com/iiif/0BwasmJBJBAHjUm1GR1VZSEFTR28/",
+                                  "@context": "http://iiif.io/api/image/2/context.json",
+                                  "profile": [ "http://iiif.io/api/image/2/level1.json", { "formats" : [ "jpg" ], "qualities" : [ "native","color","gray" ], "supports" : ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","rotationBy90s","mirroring","gray"] } ]
+                                }
+                            }
+                        }
+                    ],
+                    "label":"p. 2",
+                    "width":50,
+                    "otherContent": [
+                      {
+                        "@id":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-lat1/list/p.2",
+                         "@type":"sc:AnnotationList"
+                      }
+                    ]
+                }
+            ],
+            "label":"Current Page Order",
+            "viewingDirection":"left-to-right",
+            "viewingHint":"paged"
+        }
+    ]
+}
