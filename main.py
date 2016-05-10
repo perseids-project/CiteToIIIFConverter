@@ -91,7 +91,11 @@ def converttoiiif(file):
                     "@id":"http://"+baseurl+"/iiif/"+label+"/list/p."+str(num),
                     "@type":"sc:AnnotationList",
                     "resources":resources
-                    }    
+                    } 
+        annoout = json.dumps(annolist, sort_keys=True, indent=4, separators=(',',':'))
+        annojson = open("p."+str(num)+".json","w")
+        annojson.write(annoout)
+        annojson.close   
         #need to add something to writ the annolist to a Json file here
         #creates the image in the IIIF file, currently the label height, width, and baseurl are placeholders until we see how the image are coming from persieds and how to get the info from them. All that will be need to done will be to put that into the var in the start of he function
         images.append({
