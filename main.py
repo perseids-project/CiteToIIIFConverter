@@ -44,26 +44,29 @@ def converttoiiif(file):
     ns = {"xml":"http://www.tei-c.org/ns/1.0"}
     metadata = []
     #goes through all the metadata in the xml file and enters it into the list of dictionarys to be added to the json manifest
-    for ele in root.find(".//xml:fileDesc",nsmap = ns).iter():
+    for ele in root.find(".//xml:fileDesc", namespaces = ns).iter():
         if ele.text:
-            metadata.append({"label":[ele.tag],"value":ele.text})
+            metadata.append({"label":etree.QName(ele.tag).localname,"value":ele.text})
     #takes the title and pairs it down to the cts namespace and the work identifier
-    title = root.find(".//xml:title",nsmap = ns)
-    label = title.replace("urn:cts:","")
+    title = root.find(".//xml:title",namespaces = ns)
+    label = title.text.replace("urn:cts:","")
     #creates and ordered dict to store the words as we look to see how many unique images are ref in the xml file
     pages = collections.OrderedDict() 
     #iterates over every word and and check if the image is in the dictionary.
     #if it is it adds the word into the list of words that are stored as tuples.
     #if it is not it creates a key for the images with list of the words stored astuples 
-    for n in root.findall(".//w"):
+    for n in root.findall(".//xml:w", namespaces = ns):
         objid, wordid = n.get("facs").split(":",3)[3].split("@",1)
         if objid in pages:
-            pages[objid].append(wordid,n.text)
+            data = [wordid,n.text]
+            pages[objid].append(data)
         else:
-            pages[objid] = [(wordid,n.text)]
+            pages[objid] = [[wordid,n.text]]
     num = 0
     # reads through each images and creates a canvas for it
-    for x, y in pages:
+    images=[]
+    canvases=[]
+    for x, y in pages.items():
         num = num + 1 
         resources = []
         # takes the list of words and creates the annotation list of words for the annotation file
@@ -91,7 +94,7 @@ def converttoiiif(file):
                     }    
         #need to add something to writ the annolist to a Json file here
         #creates the image in the IIIF file, currently the label height, width, and baseurl are placeholders until we see how the image are coming from persieds and how to get the info from them. All that will be need to done will be to put that into the var in the start of he function
-        images = [{
+        images.append({
                    "@type":"oa:Annotation",
                    "motivation":"sc:painting",
                    "resource":{
@@ -107,16 +110,16 @@ def converttoiiif(file):
                                "width":width
                                },
                    "on":"http://"+baseurl+"/iiif/"+label+"/canvas/"+"p."+str(num)
-                   }]
+                   })
         #creates the canvas for the image same things with images apply here
-        canvases = [{
+        canvases.append({
                      "@id":"http://"+baseurl+"/iiif/"+label+"/canvas/"+"p."+str(num),
                      "@type":"sc:Canvas",
                      "label":"p. "+str(num),
                      "height":height,
                      "width":width,
                      "images":images
-                     }]
+                     })
     #creates a sequences with which the images should be displayed
     sequences = [{
                   "@id":"http://" + baseurl + "/iiif/" + label + "/sequence/normal",
@@ -136,7 +139,7 @@ def converttoiiif(file):
                 "metadata":metadata,
                 "sequences":sequences
                 }
-    return "";
+    return iiifjson;
 def main():
     #takes in a file as an argument and converts this annotations to IIIF
     file_to_convert = sys.argv[1]
