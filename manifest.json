@@ -44,6 +44,32 @@
                                 "@type":"dctypes:Image",
                                 "format":"image\/jpeg",
                                 "height":3367,
+                                "service":{
+                                    "@context":"http:\/\/iiif.io\/api\/image\/2\/context.json",
+                                    "@id":"http:\/\/test.iiifhosting.com\/iiif\/0BwasmJBJBAHjUm1GR1VZSEFTR28\/",
+                                    "profile":[
+                                        "http:\/\/iiif.io\/api\/image\/2\/level1.json",
+                                        {
+                                            "formats":[
+                                                "jpg"
+                                            ],
+                                            "qualities":[
+                                                "native",
+                                                "color",
+                                                "gray"
+                                            ],
+                                            "supports":[
+                                                "regionByPct",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "rotationBy90s",
+                                                "mirroring",
+                                                "gray"
+                                            ]
+                                        }
+                                    ]
+                                },
                                 "width":2247
                             }
                         }
