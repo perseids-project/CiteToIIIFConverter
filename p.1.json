@@ -6,7 +6,7 @@
         {
             "@type":"oa:Annotation",
             "motivation":"sc:painting",
-            "on":"http://www.perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/canvas/p.1#xywh=136,61,212,29",
+            "on":"http://www.perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/canvas/p.1#xywh=723,314,1127,152",
             "resource":{
                 "@type":"cnt:ContentAsText",
                 "chars":"this is the transcription text we want to display as an annotation",
