@@ -5,7 +5,9 @@ Created on May 9, 2016
 '''
 import sys, os;
 import json;
+import ujson;
 import collections;
+
 try:
     from lxml import etree
     print("running with lxml.etree")
@@ -145,7 +147,7 @@ def main():
     file_to_convert = sys.argv[1]
     iiifdoc = converttoiiif(file_to_convert)
     # writes the IIIF data to a Json file. 
-    data = json.dumps(iiifdoc, sort_keys=True, indent=4, separators=(',',':'))
+    data = ujson.dumps(iiifdoc, sort_keys=True, indent=4, escape_forward_slashes=True)
     file = open("manifest.json","w")
     file.write(data)
     file.close
