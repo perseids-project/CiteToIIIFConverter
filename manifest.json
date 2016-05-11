@@ -1,6 +1,6 @@
 {
-    "@context":"http:\\/\\/iiif.io\\/api\\/presentation\\/2\\/context.json",
-    "@id":"http:\\/\\/perseids.org\\/iiif\\/book1\\/manifest",
+    "@context":"http:\/\/iiif.io\/api\/presentation\/2\/context.json",
+    "@id":"http:\/\/perseids.org\/iiif\/book1\/manifest",
     "@type":"sc:Manifest",
     "label":"pdllatmc:medms.boh01.perseids-en-2016-3",
     "metadata":[
