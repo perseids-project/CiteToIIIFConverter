@@ -49,6 +49,12 @@
                         }
                     ],
                     "label":"p. 1",
+                    "otherContent":[
+                        {
+                            "@id":"http://www.perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/list/p.1",
+                            "@type":"sc:AnnotationList"
+                        }
+                    ],
                     "width":423
                 }
             ],
