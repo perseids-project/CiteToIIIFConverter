@@ -27,22 +27,22 @@
     ],
     "sequences":[
         {
-            "@id":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/sequence/normal",
+            "@id":"http:\/\/perseids.org\/iiif\/pdllatmc:medms.boh01.perseids-en-2016-3\/sequence\/normal",
             "@type":"sc:Sequence",
             "canvases":[
                 {
-                    "@id":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/canvas/p.1",
+                    "@id":"http:\/\/perseids.org\/iiif\/pdllatmc:medms.boh01.perseids-en-2016-3\/canvas\/p.1",
                     "@type":"sc:Canvas",
                     "height":3367,
                     "images":[
                         {
                             "@type":"oa:Annotation",
                             "motivation":"sc:painting",
-                            "on":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/canvas/p.1",
+                            "on":"http:\/\/perseids.org\/iiif\/pdllatmc:medms.boh01.perseids-en-2016-3\/canvas\/p.1",
                             "resource":{
-                                "@id":"http://perseids.org/imgup/upload-mnt/2015/JAN/080461033_1.jpg/iiif/miscellanyimgs.VW2UU7lQAz8.jpg",
+                                "@id":"http:\/\/perseids.org\/imgup\/upload-mnt\/2015\/JAN\/080461033_1.jpg\/iiif\/miscellanyimgs.VW2UU7lQAz8.jpg",
                                 "@type":"dctypes:Image",
-                                "format":"image/jpeg",
+                                "format":"image\/jpeg",
                                 "height":3367,
                                 "width":2247
                             }
@@ -51,7 +51,7 @@
                     "label":"p. 1",
                     "otherContent":[
                         {
-                            "@id":"http://perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/list/p.1",
+                            "@id":"http:\/\/perseids.org\/iiif\/pdllatmc:medms.boh01.perseids-en-2016-3\/list\/p.1",
                             "@type":"sc:AnnotationList"
                         }
                     ],
