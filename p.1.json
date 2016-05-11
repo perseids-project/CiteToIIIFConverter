@@ -1,0 +1,17 @@
+{
+    "@context":"http://iiif.io/api/presentation/2/context.json",
+    "@id":"http://www.perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/list/p.1",
+    "@type":"sc:AnnotationList",
+    "resources":[
+        {
+            "@type":"oa:Annotation",
+            "motivation":"sc:painting",
+            "on":"http://www.perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/canvas/p.1#xywh=136,61,212,29",
+            "resource":{
+                "@type":"cnt:ContentAsText",
+                "chars":"this is the transcription text we want to display as an annotation",
+                "format":"text/plain"
+            }
+        }
+    ]
+}

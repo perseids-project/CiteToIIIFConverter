@@ -1,0 +1,60 @@
+{
+    "@context":"http://iiif.io/api/presentation/2/context.json",
+    "@id":"http://www.perseids.org/iiif/book1/manifest",
+    "@type":"sc:Manifest",
+    "label":"pdllatmc:medms.boh01.perseids-en-2016-3",
+    "metadata":[
+        {
+            "label":"title",
+            "value":"urn:cts:pdllatmc:medms.boh01.perseids-en-2016-3"
+        },
+        {
+            "label":"authority",
+            "value":"Perseus Project"
+        },
+        {
+            "label":"idno",
+            "value":"urn_cts_pdllatmc_medms.boh01.perseids-en-2016-3"
+        },
+        {
+            "label":"p",
+            "value":"This work is licensed under a\n          "
+        },
+        {
+            "label":"ref",
+            "value":"Creative \n          Commons Attribution-ShareAlike 3.0 License"
+        }
+    ],
+    "sequences":[
+        {
+            "@id":"http://www.perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/sequence/normal",
+            "@type":"sc:Sequence",
+            "canvases":[
+                {
+                    "@id":"http://www.perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/canvas/p.1",
+                    "@type":"sc:Canvas",
+                    "height":659,
+                    "images":[
+                        {
+                            "@type":"oa:Annotation",
+                            "motivation":"sc:painting",
+                            "on":"http://www.perseids.org/iiif/pdllatmc:medms.boh01.perseids-en-2016-3/canvas/p.1",
+                            "resource":{
+                                "@id":"http://http://www.perseids.org/imgup/upload-mnt/2015/JAN/080461033_1.jpg/iiif/miscellanyimgs.VW2UU7lQAz8.jpg",
+                                "@type":"dctypes:Image",
+                                "format":"image/jpeg",
+                                "height":659,
+                                "width":423
+                            }
+                        }
+                    ],
+                    "label":"p. 1",
+                    "width":423
+                }
+            ],
+            "label":"Current Page Order",
+            "viewingDirection":"left-to-right",
+            "viewingHint":"paged"
+        }
+    ]
+}
