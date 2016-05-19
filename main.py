@@ -74,9 +74,17 @@ def converttoiiif(file):
         resources = []
         # takes the list of words and creates the annotation list of words for the annotation file
         for z in y:
-            cords = z[0].split('.')
+            cords = z[0].split(',')
             #creates the cordinates in format for IIIF
-            fcords = cords[0]+","+cords[1]+","+cords[2]+","+cords[3]
+            # cite uses relative coords, we represent them as fixed to the specific size of the
+            # image on the canvas here, but need ot investigate further what is possible re
+            # relative coords and iiif manifests
+            fixed_x = int(round((float(cords[0]) * width),0))
+            fixed_y = int(round((float(cords[1]) * height),0))
+            fixed_w = int(round((float(cords[2]) * width),0))
+            fixed_h = int(round((float(cords[3]) * height),0))
+ 
+            fcords = str(fixed_x) + "," + str(fixed_y) + "," + str(fixed_w) + "," + str(fixed_h)
             #takes each word 
             resources.append({
                               "@type":"oa:Annotation",
